@@ -67,11 +67,6 @@ class Customer extends Model
     }
 
 
-    public function validatePhone($phone)
-    {
-    }
-
-
     public function getCodeAttribute()
     {
         preg_match('/\((\d+)\)/', $this->phone, $matches);
