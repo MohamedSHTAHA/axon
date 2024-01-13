@@ -67,6 +67,10 @@ class Customer extends Model
     }
 
 
+    public function getFormattedPhoneAttribute()
+    {
+        return preg_replace(['/\((\d+)\)/', '/\s+/'], '', $this->phone);
+    }
     public function getCodeAttribute()
     {
         preg_match('/\((\d+)\)/', $this->phone, $matches);

@@ -19,7 +19,7 @@ class CustomerResource extends BaseResource
     {
         return [
             'id' => $this->id,
-
+            'formatted_phone' => $this->formatted_phone,
             'phone' => $this->phone,
             'state' => $this->state,
             'code' => $this->code,
