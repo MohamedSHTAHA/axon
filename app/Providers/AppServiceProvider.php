@@ -39,8 +39,8 @@ class AppServiceProvider extends ServiceProvider
             return response(array_merge([
                 'success' => in_array($statusCode, [200, 201, 202]),
                 'statusCode' => $statusCode,
-                'data' => $data,
                 'message' => $message,
+                'data' => $data,
             ], $meta), $statusCode);
 
         });

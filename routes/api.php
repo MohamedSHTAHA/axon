@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\API\CustomersController;
 use App\Http\Controllers\API\PhoneNumbersController;
 use Illuminate\Support\Facades\Route;
 
@@ -24,9 +25,12 @@ Route::group([
 
 
 
-    Route::group(['prefix' => 'phone_numbers'], function () {
+    // Route::group(['prefix' => 'phone_numbers'], function () {
 
-        Route::get('/', [PhoneNumbersController::class, 'index']);
-        Route::post('/store', [PhoneNumbersController::class, 'store']);
-    });
+    //     Route::get('/', [PhoneNumbersController::class, 'index']);
+    //     Route::post('/store', [PhoneNumbersController::class, 'store']);
+    // });
+
+    Route::get('/customers', [CustomersController::class, 'index']);
+
 });
